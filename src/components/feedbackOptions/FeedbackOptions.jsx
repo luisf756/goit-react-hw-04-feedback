@@ -35,10 +35,10 @@ const FeedbackOptions = () => {
         </section>
           
           <Statistics 
-               state={[good, neutral,bad]} 
+               state={{good, neutral,bad}} 
                total={good+neutral+bad}
                posFid={(good/(good + bad+ neutral))*100}
-            ></Statistics>
+          ></Statistics>
           
         </>
       );
