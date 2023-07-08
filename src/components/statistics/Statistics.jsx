@@ -8,9 +8,9 @@ export const Statistics = ({ state, total, posFid}) => { //
         return (
             <>
               <h2>Statistics</h2>
-              <p>good: {state.good}</p>
-              <p>Neutral: {state.neutral}</p>
-              <p>Bad: {state.bad}</p>
+              <p>good: {state[0]}</p>
+              <p>Neutral: {state[1]}</p>
+              <p>Bad: {state[2]}</p>
               <p>Total: {total}</p>
               <p>Positive feedback: {Math.round(posFid)} %</p>
             </>
@@ -34,9 +34,9 @@ export const Statistics = ({ state, total, posFid}) => { //
   //validation with proptypes
   Statistics.propTypes = {
   state: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
+    0: PropTypes.number.isRequired,
+    2: PropTypes.number.isRequired,
+    1: PropTypes.number.isRequired,
   }),
   total: PropTypes.number.isRequired,
   posFid:  PropTypes.number.isRequired
