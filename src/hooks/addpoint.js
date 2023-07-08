@@ -3,11 +3,11 @@ import { useState } from "react";
 export const addPoint=(initalValue=0)=>{
     const [value, setvalue]= useState(initalValue);
 
-    const addPo=()=>setIsOpen(true);
+    const addOne=()=>setvalue(value+1);
 
-    const closeModal=()=>setIsOpen(false);
-
-    return[addPo,openModal,closeModal];
+    const substract=()=>setvalue(value-1);
+    
+    return[value,addOne,substract];
 
 }
 
